@@ -1,0 +1,3 @@
+grep -n -m1 "" *.txt | grep -v domain_name | grep -v domainName | less
+grep -n -m1 "" *.txt | grep -v domain_name | grep -v domainName | less
+grep -n -m1 "" *.txt | grep -v domain_name | grep -v domainName | less
