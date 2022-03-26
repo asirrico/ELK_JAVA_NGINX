@@ -1,0 +1,20 @@
+input {
+    file{
+        path => "/home/usuario/Downloads/*.txt"
+        start_position => "beginning"
+        sincedb_path => "/dev/null"
+    }
+}
+filter {
+        csv {
+            autodetect_column_names => true
+            separator => ","
+        }
+}
+output {
+        elaticsearch{
+            action => "index"
+            host => ["127.0.0.1:9200"]
+            index => "whois.com"
+        }
+}
